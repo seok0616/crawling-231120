@@ -23,5 +23,5 @@ if __name__ == '__main__':
     # u = input('영화 url을 입력하시오')
     u ='https://comment.daum.net/apis/v1/posts/149761585/comments?parentId=0&offset=0&limit=10&sort=LATEST&isInitial=true&hasNext=true'
     d.set_url(u)
-    u2=d.get_reviews()
+    count_json=d.get_reviews()
     print(f'1- 리뷰갯수 : {count_json}')
