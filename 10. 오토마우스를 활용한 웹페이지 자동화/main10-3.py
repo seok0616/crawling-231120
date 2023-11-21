@@ -18,4 +18,4 @@ start_y = 220
 end_x = 1656
 end_y = 635
 
-pyautogui.screenshot(r'10. 오토마우스를 활용한 웹페이지 자동화\서울날씨.png', region=(start_x, start_y, end_x-start_x, end_y-start_y))
+pyautogui.screenshot(f'./서울날씨.png', region=(start_x, start_y, end_x-start_x, end_y-start_y))
