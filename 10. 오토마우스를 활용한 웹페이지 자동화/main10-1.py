@@ -14,8 +14,7 @@ class Weather:
             print(pyautogui.position())
             time.sleep(0.1)
     def naver_weather(self):
-        pyautogui.moveTo(1241, 206, 0.2)서울 날씨
-
+        pyautogui.moveTo(1241, 206, 0.2)
         pyautogui.click()
         time.sleep(0.5)
 
