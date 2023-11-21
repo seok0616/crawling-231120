@@ -1,4 +1,5 @@
 from gtts import gTTS
+from playsound import playsound
 
 class TextToSpeech:
 
@@ -10,12 +11,13 @@ class TextToSpeech:
         tts = gTTS(text=self.text, lang='ko')
         tts.save(f"./{title}.mp3")
 
-if __name__ == '__main__':
 
-    t = TextToSpeech
-    title = input('제목을 입력하시오')
-    text = input('변환하려는 문장을 입력하시오')
+if __name__ == '__main__':
+    t=TextToSpeech()
+    title = input('제목을 입력')
+    text = input('내용을 입력')
     t.set_text(text)
     t.save_mp3(title)
 
-    playsound("./hi.mp3")
+    playsound(f"./{title}.mp3")
+
