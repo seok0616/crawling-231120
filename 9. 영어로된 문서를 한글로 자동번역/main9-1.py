@@ -42,7 +42,7 @@ if __name__ == '__main__':
         menu = input('0-종료, 1-입력하세요, 2-영어에서 한글, 3-한글에서 영어,4-영어문서 한글로')
         if menu == '0':
             print('프로그램 종료')
-        break  # 종료일 때는 break
+            break  # 종료일 때는 break
         elif menu == '1':
             text = input('문장을 입력')  # 하나
             t.set_text(text)
