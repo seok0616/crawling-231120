@@ -32,11 +32,16 @@ class Certificate:
 
 if __name__ == '__main__':
     c = Certificate()
-    name = input('이름: ')
-    birth = input('생년월일: ')
-    c_number = input('수료증번호: ')
-    c.set_student(name,birth,c_number)
-    stu = c.get_student()
-    for i in stu:
+    ls = []
+    for i in range(2):
+        name = input('이름: ')
+        birth = input('생년월일: ')
+        c_number = input('수료증번호: ')
+        c.set_student(name,birth,c_number)
+        stu = c.get_student()
+        ls.append(stu)
+    for i in ls:
         print(i)
-    c.save_to_excel()
+
+
+    # c.save_to_excel()
