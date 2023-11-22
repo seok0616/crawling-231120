@@ -9,7 +9,7 @@ class DaumMovie:
         self.url=''
         self.count = None  # 숫자인지 문자인지 명확하지 않은경우 None으로 정의 숫자일경우 '0', 문자일경우 '' # 크롤링 결과
         self.review_count = 0
-        self.set_review_list = []
+        self.review_list = []
 
     def set_url(self,url):
         self.url = url
@@ -31,7 +31,14 @@ class DaumMovie:
         for i in range(0,1): #. self.review_count가 맞는데 시간 관계상
             res = requests.get(self.url) # request는 get 이다. 실용사례 많음.
             ls = json.loads(res.text)
-            print(f' i값 : {i}')
+            print(f' i값 : {ls}')
+            for i, _ in enumerate(ls):
+                review = ls[i]['content']
+                user = ls[i]['user']['displayName']
+                rating = ls[i]['rating']
+                self.review_list.append([user,rating,review])
+            df = pd.DataFrame(self.review_list, columns={'user','rating','review'})
+            df.to_excel('./data/daum_review.xlsx')
 
 if __name__ == '__main__':
     d = DaumMovie()
