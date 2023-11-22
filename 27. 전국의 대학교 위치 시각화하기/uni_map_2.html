@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a4de86864d66122cbcd9a82332f99ab6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_a4de86864d66122cbcd9a82332f99ab6" ></div>
+        
+</body>
+<script>    
+    
+            var map_a4de86864d66122cbcd9a82332f99ab6 = L.map(
+                "map_a4de86864d66122cbcd9a82332f99ab6",
+                {
+                    center: [37.0, 127.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8d31fc908dd2d1920e494b18ad0d9ea0 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a4de86864d66122cbcd9a82332f99ab6);
+        
+    
+            var marker_81ac22205a03c6b89bbf700aa7f6d60e = L.marker(
+                [37.341435483, 126.733026596],
+                {}
+            ).addTo(map_a4de86864d66122cbcd9a82332f99ab6);
+        
+    
+            var icon_c57ef0b4fdbe06f62f8acafdea778fa4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_81ac22205a03c6b89bbf700aa7f6d60e.setIcon(icon_c57ef0b4fdbe06f62f8acafdea778fa4);
+        
+    
+        var popup_0400e95a7c50dd61bc1235b0ac95d8fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3c739cb442e6599a10b5592696959fd8 = $(`<div id="html_3c739cb442e6599a10b5592696959fd8" style="width: 100.0%; height: 100.0%;">한국공학대학교</div>`)[0];
+                popup_0400e95a7c50dd61bc1235b0ac95d8fd.setContent(html_3c739cb442e6599a10b5592696959fd8);
+            
+        
+
+        marker_81ac22205a03c6b89bbf700aa7f6d60e.bindPopup(popup_0400e95a7c50dd61bc1235b0ac95d8fd)
+        ;
+
+        
+    
+</script>
